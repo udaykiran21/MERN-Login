@@ -12,7 +12,7 @@ const RegisterModel = require("./models/users") //importing the schema
 
 const router = express.Router()
 const port = process.env.PORT || 5000 //assigns the port 5000 if available
-
+//mongosdb connection
 mongoose.connect(url, {useNewUrlParser:true, useCreateIndex: true, useUnifiedTopology: true})
 			.then(() => console.log("db connected..."))
 			.catch((err) => console.log(err))
